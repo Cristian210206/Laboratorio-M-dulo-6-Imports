@@ -3,6 +3,9 @@ import {
     puntuacionHtml,
     carta,
     mostrarMensajeHTML,
+    dameCartaBoton,
+    plantarseBoton,
+    supuestoBoton,
   } from "./modelo";
 
 import {
@@ -14,8 +17,6 @@ import {
     desactivarBotonesVictoria,
     desactivarBotones,
     mensajePlantarse,
-    activarBotonSupuesto,
-    reiniciarBotones,
     reiniciarPuntos,
     desactivarBotonSupuesto,
     mensajeSupuesto,
@@ -88,6 +89,34 @@ import {
     ) {
       carta.src =
         "https://raw.githubusercontent.com/Lemoncode/fotos-ejemplos/main/cartas/back.jpg";
+    }
+  }
+
+  function activarBotonSupuesto() {
+    if (
+      supuestoBoton !== null &&
+      supuestoBoton !== undefined &&
+      supuestoBoton instanceof HTMLButtonElement
+    ) {
+      supuestoBoton.disabled = false;
+    }
+  }
+
+  function reiniciarBotones() {
+    if (
+      plantarseBoton !== null &&
+      plantarseBoton !== undefined &&
+      plantarseBoton instanceof HTMLButtonElement &&
+      dameCartaBoton !== null &&
+      dameCartaBoton !== undefined &&
+      dameCartaBoton instanceof HTMLButtonElement &&
+      supuestoBoton !== null &&
+      supuestoBoton !== undefined &&
+      supuestoBoton instanceof HTMLButtonElement
+    ) {
+      dameCartaBoton.disabled = false;
+      plantarseBoton.disabled = false;
+      supuestoBoton.disabled = true;
     }
   }
 

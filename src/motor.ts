@@ -117,33 +117,7 @@ export function dameNumeroRandom() {
     }
   }
 
-  export function activarBotonSupuesto() {
-    if (
-      supuestoBoton !== null &&
-      supuestoBoton !== undefined &&
-      supuestoBoton instanceof HTMLButtonElement
-    ) {
-      supuestoBoton.disabled = false;
-    }
-  }
 
-  export function reiniciarBotones() {
-    if (
-      plantarseBoton !== null &&
-      plantarseBoton !== undefined &&
-      plantarseBoton instanceof HTMLButtonElement &&
-      dameCartaBoton !== null &&
-      dameCartaBoton !== undefined &&
-      dameCartaBoton instanceof HTMLButtonElement &&
-      supuestoBoton !== null &&
-      supuestoBoton !== undefined &&
-      supuestoBoton instanceof HTMLButtonElement
-    ) {
-      dameCartaBoton.disabled = false;
-      plantarseBoton.disabled = false;
-      supuestoBoton.disabled = true;
-    }
-  }
 
   export function reiniciarPuntos() {
     partida.puntuacion = 0;
