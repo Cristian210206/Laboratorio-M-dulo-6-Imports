@@ -114,12 +114,21 @@ import {
     mostrarMensaje(mensaje, partida.puntuacion);
     desactivarBotonesVictoria();
   }
+
+  function gestionarPartida() {
+    if (partida.puntuacion === 7.5) {
+      victoria(partida.puntuacion)
+    }
+
+    if (partida.puntuacion > 7.5) {
+      gameOver()
+    }
+  }
   
   export function ejecutarEnBotonDameCarta() {
     dameCarta();
     muestraPuntuacion();
-    gameOver();
-    victoria(partida.puntuacion);
+    gestionarPartida();
   }
   
   export function ejecutarEnBotonPlantarse() {
